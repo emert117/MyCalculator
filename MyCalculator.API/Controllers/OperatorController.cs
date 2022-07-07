@@ -30,6 +30,24 @@ namespace MyCalculator.API.Controllers
             return new List<string>() {""};
         }
 
+        [HttpPost("Calculate")]
+        public CalculationResult<double> Calculate([FromBody] CalculationRequest request)
+        {
+            switch (request.Operator)
+            {
+                case "+":
+                    return _additionService.Calculate(request.Operands);
+                case "-":
+                    return _subtractionService.Calculate(request.Operands);
+                case "/":
+                    return _divisionService.Calculate(request.Operands);
+                case "*":
+                    return _multiplicationService.Calculate(request.Operands);
+            }
+
+            return new CalculationResult<double>() {IsSuccessful = false};
+        }
+
         [HttpPost("Addition")]
         public CalculationResult<double> Addition([FromBody] double[] operands)
         {
