@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My Calculator</title>
+    <link rel="stylesheet"
+          href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+<div class="col-sm-6 col-sm-offset-3">
+    <h1>My Calculator</h1>
+
+    <form action="https://localhost:7000/operator/calculate" method="POST">
+        <div id="name-group" class="form-group">
+            <label for="firstOperand">First Operand</label>
+            <input type="text"
+                   class="form-control"
+                   id="firstOperand"
+                   name="firstOperand"
+                   placeholder="5" />
+        </div>
+
+        <div id="email-group" class="form-group">
+            <label for="operator">Operator</label>
+            <select name="operator" id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+                <option value="*">*</option>
+            </select>
+        </div>
+
+        <div id="superhero-group" class="form-group">
+            <label for="secondOperand">Second Operand</label>
+            <input type="text"
+                   class="form-control"
+                   id="secondOperand"
+                   name="secondOperand"
+                   placeholder="6" />
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Calculate
+        </button>
+
+        <div id="superhero-group" class="form-group">
+            <label for="result">Result</label>
+            <input type="text"
+                   class="form-control"
+                   id="result"
+                   name="result"
+                   placeholder="Result" />
+        </div>
+    </form>
+    <script src="app.js"></script>
+</div>
+</body>
+</html>

@@ -36,6 +36,14 @@ namespace MyCalculator.API
 
             app.MapControllers();
 
+            app.UseCors(builder =>
+            {
+                builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            });
+
             app.Run();
         }
     }
