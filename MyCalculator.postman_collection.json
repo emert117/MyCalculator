@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "6f20ed8f-4af0-4055-a51c-26f77080d9d2",
+		"name": "MyCalculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4271026"
+	},
+	"item": [
+		{
+			"name": "Calculate with Single Operator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Operands\": [5,6],\r\n  \"Operators\": [\"+\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7000/Operator/Calculate",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"Operator",
+						"Calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate with Multiple Operators",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Operands\": [5,6,2,7],\r\n  \"Operators\": [\"+\", \"*\", \"-\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7000/Operator/Calculate",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"Operator",
+						"Calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Operator List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7000/Operator/GetOperatorList",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"Operator",
+						"GetOperatorList"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
