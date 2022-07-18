@@ -16,10 +16,14 @@ namespace MyCalculator.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddScoped<IAdditionOperator, AdditionOperator>();
-            builder.Services.AddScoped<IDivisionOperator, DivisionOperator>();
-            builder.Services.AddScoped<IMultiplicationOperator, MultiplicationOperator>();
-            builder.Services.AddScoped<ISubtractionOperator, SubtractionOperator>();
+            builder.Services.AddScoped<IOperator<double>, AdditionOperator>();
+            builder.Services.AddScoped<IOperator<double>, DivisionOperator>();
+            builder.Services.AddScoped<IOperator<double>, MultiplicationOperator>();
+            builder.Services.AddScoped<IOperator<double>, SubtractionOperator>();
+
+            builder.Services.AddScoped<IDictionary<string, IOperator<double>>>(provider =>
+                provider.GetServices<IOperator<double>>().ToDictionary(k => k.OperatorSymbol));
+
 
             var app = builder.Build();
 
