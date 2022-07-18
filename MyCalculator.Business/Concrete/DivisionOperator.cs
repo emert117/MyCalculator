@@ -12,6 +12,7 @@ namespace MyCalculator.Business.Concrete
         public string OperatorSymbol => "/";
 
         public string OperatorName => "Division";
+        public int Precedence => 2;
 
         public CalculationResult<double> Calculate(double[] inputs)
         {

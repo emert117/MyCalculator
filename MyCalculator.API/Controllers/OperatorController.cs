@@ -10,10 +10,12 @@ namespace MyCalculator.API.Controllers
     public class OperatorController : ControllerBase
     {
         private readonly IDictionary<string, IOperator<double>> _allOperators;
+        private ICalculationRequestHandler<double> _calculationRequestHandler;
 
-        public OperatorController(IDictionary<string, IOperator<double>> allOperators)
+        public OperatorController(IDictionary<string, IOperator<double>> allOperators, ICalculationRequestHandler<double> calculationRequestHandler)
         {
             _allOperators = allOperators;
+            _calculationRequestHandler = calculationRequestHandler;
         }
 
         [Route("GetOperatorList")]
@@ -26,7 +28,7 @@ namespace MyCalculator.API.Controllers
         [HttpPost("Calculate")]
         public CalculationResult<double> Calculate([FromBody] CalculationRequest request)
         {
-            return _allOperators[request.Operator].Calculate(request.Operands);
+            return _calculationRequestHandler.Calculate(request, _allOperators);
         }
 
     }

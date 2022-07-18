@@ -13,6 +13,8 @@ namespace MyCalculator.Business.Concrete
 
         public string OperatorName => "Subtraction";
 
+        public int Precedence => 1;
+
         public CalculationResult<double> Calculate(double[] inputs)
         {
             CalculationResult<double> result = new CalculationResult<double>();

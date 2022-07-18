@@ -12,7 +12,8 @@ namespace MyCalculator.Business.Concrete
         public string OperatorSymbol => "*";
 
         public string OperatorName => "Multiplication";
-
+        public int Precedence => 2;
+        
         public CalculationResult<double> Calculate(double[] inputs)
         {
             CalculationResult<double> result = new CalculationResult<double>();

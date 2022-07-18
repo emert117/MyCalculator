@@ -11,6 +11,9 @@ namespace MyCalculator.Business.Abstract
     {
         string OperatorSymbol { get; }
         string OperatorName { get; }
+
+        int Precedence { get; }
+
         public CalculationResult<T> Calculate(T[] inputs);
     }
 }

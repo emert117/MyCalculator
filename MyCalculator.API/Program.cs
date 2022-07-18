@@ -17,13 +17,14 @@ namespace MyCalculator.API
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddScoped<IOperator<double>, AdditionOperator>();
+            builder.Services.AddScoped<IOperator<double>, SubtractionOperator>();
             builder.Services.AddScoped<IOperator<double>, DivisionOperator>();
             builder.Services.AddScoped<IOperator<double>, MultiplicationOperator>();
-            builder.Services.AddScoped<IOperator<double>, SubtractionOperator>();
 
             builder.Services.AddScoped<IDictionary<string, IOperator<double>>>(provider =>
                 provider.GetServices<IOperator<double>>().ToDictionary(k => k.OperatorSymbol));
-
+            
+            builder.Services.AddScoped<ICalculationRequestHandler<double>, CalculationRequestHandler>();
 
             var app = builder.Build();
 
