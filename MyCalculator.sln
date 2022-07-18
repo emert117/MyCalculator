@@ -3,20 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalculator.Business", "MyCalculator.Business\MyCalculator.Business.csproj", "{0296E610-EA86-4862-A183-E2F51C5DCA51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCalculator.Business", "MyCalculator.Business\MyCalculator.Business.csproj", "{0296E610-EA86-4862-A183-E2F51C5DCA51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalculator.BusinessTests", "MyCalculator.BusinessTests\MyCalculator.BusinessTests.csproj", "{0B428DBA-5847-4BB3-884C-26C442C6ABD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCalculator.BusinessTests", "MyCalculator.BusinessTests\MyCalculator.BusinessTests.csproj", "{0B428DBA-5847-4BB3-884C-26C442C6ABD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalculator.API", "MyCalculator.API\MyCalculator.API.csproj", "{0CAA057B-DB6E-407C-92F0-A7B12BF9F43B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCalculator.API", "MyCalculator.API\MyCalculator.API.csproj", "{0CAA057B-DB6E-407C-92F0-A7B12BF9F43B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalculator.Web", "MyCalculator.Web\MyCalculator.Web.csproj", "{739A144E-168F-4F7E-AD1C-0EBA5AB2B171}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCalculator.Web", "MyCalculator.Web\MyCalculator.Web.csproj", "{739A144E-168F-4F7E-AD1C-0EBA5AB2B171}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4899770-EC63-4736-9FDD-AFB4F25963F9}"
 	ProjectSection(SolutionItems) = preProject
-		example postman request.png = example postman request.png
-		MyCalculator.postman_collection.json = MyCalculator.postman_collection.json
 		README.md = README.md
-		website_screenshot.png = website_screenshot.png
 	EndProjectSection
 EndProject
 Global
